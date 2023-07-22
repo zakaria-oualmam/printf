@@ -24,6 +24,11 @@ int _printf(const char *format, ...)
 				case '%':
                                         count += _putchar(*str);
                                         break;
+				case 'd':
+				case 'i':
+                                        count += _print_int(va_arg(args, int));
+                                        break;
+
 
 			}
 			str++;
