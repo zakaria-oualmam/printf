@@ -21,6 +21,8 @@ int main(void)
     printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
+    len = _printf("Percent:[%%]\n");
+    len = printf("Percent:[%%]\n");
     /*ui = (unsigned int)INT_MAX + 1024;
     addr = (void *)0x7ffe637541f0;
     _printf("Length:[%d, %i]\n", len, len);
