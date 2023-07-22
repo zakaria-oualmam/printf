@@ -17,6 +17,8 @@ int main(void)
     len2 = printf("Let's try to printf a simple sentence.\n");
     printf("len: %d\n",len);
     printf("len: %d\n",len2);
+    _printf("Character:[%c]\n", 'H');
+    printf("Character:[%c]\n", 'H');
     /*ui = (unsigned int)INT_MAX + 1024;
     addr = (void *)0x7ffe637541f0;
     _printf("Length:[%d, %i]\n", len, len);
