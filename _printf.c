@@ -1,12 +1,5 @@
 #include "main.h"
 
-/**
- * _printf - Custom printf function.
- * @format: The format string containing placeholders.
- *
- * Return: The total number of characters printed.
- */
-
 int _printf(const char *format, ...)
 {
 	va_list args;
@@ -20,26 +13,26 @@ int _printf(const char *format, ...)
 		if (*str == '%')
 		{
 			str++;
-			switch (*str)
+			switch(*str)
 			{
 				case 'c':
 					count += _putchar(va_arg(args, int));
 					break;
 				case 's':
-					count += _puts(va_arg(args, char*));
-					break;
+                                        count += _puts(va_arg(args, char*));
+                                        break;
 				case '%':
-					count += _putchar(*str);
-					break;
+                                        count += _putchar(*str);
+                                        break;
 				case 'd':
 				case 'i':
-					count += _print_int(va_arg(args, int));
-					break;
+                                        count += _print_int(va_arg(args, int));
+                                        break;
 
 
 			}
 			str++;
-
+				
 		}
 		count += _putchar(*str);
 		str++;
@@ -47,3 +40,4 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
+
