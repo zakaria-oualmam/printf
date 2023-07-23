@@ -19,20 +19,20 @@ int _printf(const char *format, ...)
 					count += _putchar(va_arg(args, int));
 					break;
 				case 's':
-                                        count += _puts(va_arg(args, char*));
-                                        break;
+					count += _puts(va_arg(args, char*));
+					break;
 				case '%':
-                                        count += _putchar(*str);
-                                        break;
+					count += _putchar(*str);
+					break;
 				case 'd':
 				case 'i':
-                                        count += _print_int(va_arg(args, int));
-                                        break;
+					count += _print_int(va_arg(args, int));
+					break;
 
 
 			}
 			str++;
-				
+
 		}
 		count += _putchar(*str);
 		str++;
