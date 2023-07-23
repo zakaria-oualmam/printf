@@ -3,7 +3,7 @@
 /**
  * handle_format - handles different specifiers
  * @specifier: the specifier
- * @arg: argument
+ * @args: argument
  * Return: counter
  */
 
