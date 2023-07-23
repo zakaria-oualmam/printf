@@ -2,6 +2,7 @@
 #define MAIN_H
 #include <limits.h>
 #include <stdarg.h>
+#include<stdlib.h>
 
 int _putchar(char c);
 int _printf(const char *format, ...);
