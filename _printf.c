@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * _printf - produces output according to a format
+ * @format:
+ * @...:
+ * Return: counter
+ */
 int _printf(const char *format, ...)
 {
 	va_list args;
