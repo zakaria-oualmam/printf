@@ -30,8 +30,10 @@ int main(void)
 	printf("Len:[%d]\n", len2);
 	_printf("%b\n", 98);
 	_printf("Unknown:[%r]\n");
-	_printf("Unknown:[%r]\n");
-	// Print numbers from 1 to 10
+	_printf("Unknown:[%r]\n);
+
+	// print numbers from 1 to 10
+
 	int result1, result2, result3;
 	long int l;
 	_printf("%d\n", 1024);
