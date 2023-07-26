@@ -13,6 +13,8 @@ int main(void)
 	int len2;
 	int result1, result2, result3;
 	long int l;
+	unsigned int ui;
+	ui = (unsigned int)INT_MAX + 1024;
 	
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
@@ -23,6 +25,7 @@ int main(void)
 	_printf("Negative:[%d]\n", -762534);
 	printf("Negative:[%d]\n", -762534);
 	_printf("Character:[%c]\n", 'H');
+	_printf("Character:[%     c]\n", 'A');
 	printf("Character:[%c]\n", 'H');
 	_printf("String:[%s]\n", "I am a string !");
 	printf("String:[%s]\n", "I am a string !");
@@ -33,8 +36,14 @@ int main(void)
 	_printf("%b\n", 98);
 	_printf("Unknown:[%r]\n");
 	_printf("Unknown:[%r]\n");
-
-	
+	_printf("Unsigned:[%u]\n", ui);
+    	printf("Unsigned:[%u]\n", ui);
+    	_printf("Unsigned octal:[%o]\n", ui);
+    	printf("Unsigned octal:[%o]\n", ui);
+    	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    	printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+	_printf("%%%%\n");
+    	printf("%%%%\n");
 
 	_printf("%d\n", 1024);
 	result1 = printf("%d\n", 1024);

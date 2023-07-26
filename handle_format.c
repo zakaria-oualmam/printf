@@ -29,6 +29,10 @@ int handle_format(va_list args, char specifier)
 		case 'b':
 				counter += print_binary(va_arg(args, unsigned int));
 				break;
+		case 'u':
+				counter += print_unsigned(va_arg(args, unsigned int));
+				break;
+		
 		default:
 				_putchar('%');
 				_putchar(specifier);

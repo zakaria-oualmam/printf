@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	const char *str;
-	int count = 0;
+	int count = 0, space = 0;
 
 	va_start(args, format);
 
@@ -23,9 +23,16 @@ int _printf(const char *format, ...)
 	str = format;
 	while (*str != '\0')
 	{
-		if (*str == '%')
+		if (*str == '%' || space)
 		{
 			str++;
+			if (*str == ' ')
+			{
+				space = 1;
+				count++;
+				continue;
+			}
+			space = 0;
 			count += handle_format(args, *str);
 		}
 		else
